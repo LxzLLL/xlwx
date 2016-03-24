@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "NoiseReport";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+
+<h2>NoiseReport</h2>
+<div>
+    <table>
+        <tr>
+            <th>第1列</th>
+            <th>第2列</th>
+            <th>第3列</th>
+            <th>第4列</th>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.pm</td>
+            <td>@ViewBag.pm</td>
+            <td>@ViewBag.pm</td>
+            <td>@ViewBag.pm</td>
+        </tr>
+    </table>
+    <p>
+        @ViewBag.Result
+    </p>
+</div>

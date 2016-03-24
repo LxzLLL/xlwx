@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "JsApi";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+@section head{
+    <script>
+        wx.config(@Html.Raw(ViewBag.config));
+        wx.ready(function () {
+            alert("wxjs is ready!");
+            // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
+            $('#checkJsApi').click(function () {
+                wx.checkJsApi({
+                    jsApiList: [
+                      'getNetworkType'
+                    ],
+                    success: function (res) {
+                        alert(JSON.stringify(res));
+                    }
+                });
+            });
+            // 1 获取网络状态
+            $('#getNetworkType').click(function () {
+                wx.getNetworkType({
+                    success: function (res) {
+                        var networkType = res.networkType; // 返回网络类型2g，3g，4g，wifi
+                        alert(networkType);
+                    }
+                });
+            });
+        });
+
+        wx.error(function (res) {
+            alert("接口验证失败，详细信息：\n"+JSON.stringify(res));
+        });
+</script>
+    }
+<h2>JsApi</h2>
+<div>
+    <h3 id="menu-basic">基础接口</h3>
+    <span class="desc">判断当前客户端是否支持指定JS接口</span>
+    <button class="btn btn_primary" id="checkJsApi">checkJsApi</button>
+    <h3 id="menu-basic">设备信息</h3>
+    <span class="desc">获取网络状态接口</span>
+    <button class="btn btn_primary" id="getNetworkType">getNetworkType</button>
+</div>

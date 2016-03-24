@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <!--公众号配置-->
+<GZConfig>
+  <Token>fThj38Lt9ft2Gjm</Token>
+  <AppID></AppID>
+  <EncodingAESKey></EncodingAESKey>
+</GZConfig>

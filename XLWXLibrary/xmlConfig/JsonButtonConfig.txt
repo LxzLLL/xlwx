@@ -1,0 +1,29 @@
+{
+   "button":[
+       {	
+           "type":"click",
+           "name":"今日事件",
+           "key":"V1001_TODAY_MUSIC"
+       },
+       {
+           "name":"鋆达科技",
+           "sub_button":[
+               {
+                   "type":"view",
+                   "name":"网址",
+                   "url":"http://wxqy.tunnel.qydev.com/JsApi/JsApi"
+               },
+               {
+                   "type":"click",
+                   "name":"赞我们",
+                   "key":"V1001_GOOD"
+               }
+           ]
+      },
+	   {
+            "name": "发送位置", 
+            "type": "location_select", 
+            "key": "rselfmenu_2_0"
+        }
+   ]
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--企业号配置-->
+<QYConfig>
+  <Token>nzukCDCEAluzXjDB4qILadzW</Token>
+  <CorpID>wx033deb4ae901b2e9</CorpID>
+  <AgentID>2</AgentID>
+  <EncodingAESKey>QYB92H9Hphk6wcl6D7jbgTgLsSbJbKiYI9DlCXMOVhT</EncodingAESKey>
+</QYConfig>
+

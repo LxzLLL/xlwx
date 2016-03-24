@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E4C820C-56AD-4ECF-93D5-A3F2D02DA1DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XLWXLibrary</RootNamespace>
+    <AssemblyName>XLWXLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JSSDK\JsApiEnum.cs" />
+    <Compile Include="JSSDK\JsApiTicketsManager.cs" />
+    <Compile Include="JSSDK\JSSDKHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WXEntity\ActiveCallBaseEntity.cs" />
+    <Compile Include="WXEntity\SignPackage.cs" />
+    <Compile Include="WXEntity\MessageBaseEntity.cs" />
+    <Compile Include="WXEntity\QYEntity\QYMessageEntity.cs" />
+    <Compile Include="WXEntity\ErrMsgEntity.cs" />
+    <Compile Include="WXEntity\XmlEntity\AccessTokenEntity.cs" />
+    <Compile Include="WXEntity\XmlEntity\RouteItemEntity.cs" />
+    <Compile Include="WXEntity\XmlEntity\WXGZConfigEntity.cs" />
+    <Compile Include="WXEntity\XmlEntity\WXQYConfigEntity.cs" />
+    <Compile Include="WXHandler\ActiveCallProcess\ActiveProcess.cs" />
+    <Compile Include="WXHandler\IWXHandler.cs" />
+    <Compile Include="WXHandler\PassiveResponseProcess\PassiveProcess.cs" />
+    <Compile Include="WXHandler\WXGZ\Menu\MenuManager.cs" />
+    <Compile Include="WXHandler\WXGZ\WXGZHandler.cs" />
+    <Compile Include="WXHandler\WXHandlerBase.cs" />
+    <Compile Include="WXHandler\ActiveCallProcess\ActiveRequest.cs" />
+    <Compile Include="WXHandler\Cryptography\Cryptography.cs" />
+    <Compile Include="WXHandler\Cryptography\Sample.cs" />
+    <Compile Include="WXHandler\Cryptography\WXBizMsgCrypt.cs" />
+    <Compile Include="WXHandler\WXQY\Department\DepartmentManager.cs" />
+    <Compile Include="WXHandler\WXQY\Department\TagManager.cs" />
+    <Compile Include="WXHandler\WXQY\Department\UserManager.cs" />
+    <Compile Include="WXHandler\WXQY\Menu\MenuManager.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\BatchJobResult.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\ClickEvent.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\EnterAgent.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\Location.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\LocationSelect.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\PicPhotoOrAlbum.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\PicSysPhoto.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\PicWeiXin.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\ScancodePush.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\ScancodeWaitmsg.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\Subscribe.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\Unsubscribe.cs" />
+    <Compile Include="WXHandler\WXQY\Message\Event\ViewEvent.cs" />
+    <Compile Include="WXHandler\WXQY\Message\IMessage.cs" />
+    <Compile Include="WXHandler\WXQY\Message\MessageDispatcher.cs" />
+    <Compile Include="WXHandler\WXQY\Message\MsgEvent.cs" />
+    <Compile Include="WXHandler\WXQY\Message\MsgText.cs" />
+    <Compile Include="WXHandler\WXQY\WXQYHandler.cs" />
+    <Compile Include="WXHandler\XmlToEntity.cs" />
+    <Compile Include="WXHttpHandler.cs" />
+    <Compile Include="WXRouteHandler.cs" />
+    <Compile Include="WXValidity\VerifyValidity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WXHandler\Cryptography\Readme.txt" />
+    <Content Include="xmlConfig\Credential.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xmlConfig\JsonButtonConfig.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xmlConfig\RouteConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xmlConfig\WXQYConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xmlConfig\WXGZConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XLToolLibrary\XLToolLibrary.csproj">
+      <Project>{f8cbbb41-ff84-4994-a295-5a4e950ec25d}</Project>
+      <Name>XLToolLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WXEntity\GZEntity\" />
+    <Folder Include="WXEntity\QYEntity\ResultEntity\" />
+    <Folder Include="WXEntity\ResultEntity\" />
+    <Folder Include="WXHandler\WXGZ\Message\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

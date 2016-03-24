@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--配置路由与处理Handler的映射，回执连接中必须有Controller的内容，否则匹配不到-->
+<RouteItems>
+  <RouteItem>
+    <!--微信平台类型，公众号：GZ；企业号：QY-->
+    <WxPlatFormType>GZ</WxPlatFormType>
+    <Controller>/wx/gz</Controller>
+    <AssemblyName>XLWXLibrary</AssemblyName>
+    <ClassName>XLWXLibrary.WXHandler.WXGZ.WXGZHandler</ClassName>
+  </RouteItem>
+    <RouteItem>
+    <!--微信平台类型，公众号：GZ；企业号：QY-->
+    <WxPlatFormType>QY</WxPlatFormType>
+    <Controller>/wx/qy</Controller>
+    <AssemblyName>XLWXLibrary</AssemblyName>
+    <ClassName>XLWXLibrary.WXHandler.WXQY.WXQYHandler</ClassName>
+  </RouteItem>
+</RouteItems>
